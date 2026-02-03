@@ -1,0 +1,23 @@
+[
+  {
+    "title": "First post",
+    "date": "2026-03-02",
+    "category": "life",
+    "summary": "Một bài test đầu tiên.",
+    "url": "blog.html#first-post"
+  },
+  {
+    "title": "How I plan my week",
+    "date": "2026-03-05",
+    "category": "productivity",
+    "summary": "Checklist đơn giản cho mỗi tuần.",
+    "url": "blog.html#plan-week"
+  },
+  {
+    "title": "Learning notes",
+    "date": "2026-03-10",
+    "category": "study",
+    "summary": "Ghi chú ngắn khi học.",
+    "url": "blog.html#learning-notes"
+  }
+]
