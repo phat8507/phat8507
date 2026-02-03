@@ -1,5 +1,5 @@
 async function loadPosts() {
-  const res = await fetch("posts.json", { cache: "no-store" });
+  const res = await fetch("./posts.json", { cache: "no-store" });
   if (!res.ok) return [];
   return await res.json();
 }
@@ -84,7 +84,7 @@ function renderSearchResults(posts, q, container) {
   container.innerHTML = filtered.slice(0, 20).map(p => {
     return `
       <div class="result">
-        <a href="${p.url}" class="result-title">${escapeHtml(p.title)}</a>
+        <a href="./${p.url}" class="result-title">${escapeHtml(p.title)}</a>
         <div class="result-meta">${escapeHtml(p.category)} · ${escapeHtml(p.date)}</div>
       </div>
     `;
@@ -127,9 +127,7 @@ function renderBlog(posts) {
     meta.textContent = label;
   }
 
-  if (clear) {
-    clear.hidden = !(cat || q);
-  }
+  if (clear) clear.hidden = !(cat || q);
 
   list.innerHTML = filtered
     .sort((a,b) => String(b.date).localeCompare(String(a.date)))
@@ -148,9 +146,7 @@ function renderBlog(posts) {
       `;
     }).join("");
 
-  if (filtered.length === 0) {
-    list.innerHTML = `<div class="muted">No posts.</div>`;
-  }
+  if (filtered.length === 0) list.innerHTML = `<div class="muted">No posts.</div>`;
 }
 
 function renderCategories(posts) {
@@ -168,7 +164,7 @@ function renderCategories(posts) {
   el.innerHTML = cats.map(([c, n]) => {
     return `
       <div class="item">
-        <h2 class="item-title"><a href="blog.html?category=${encodeURIComponent(c)}">${escapeHtml(c)}</a></h2>
+        <h2 class="item-title"><a href="./blog.html?category=${encodeURIComponent(c)}">${escapeHtml(c)}</a></h2>
         <div class="item-meta"><span>${n} posts</span></div>
       </div>
     `;
@@ -184,3 +180,4 @@ function renderCategories(posts) {
   if (document.getElementById("postList")) renderBlog(posts);
   if (document.getElementById("catList")) renderCategories(posts);
 })();
+v
