@@ -173,4 +173,59 @@ a:hover{text-decoration:underline;}
 .modal-backdrop{
   position:absolute;
   inset:0;
-  background:r
+  background:rgba(0,0,0,0.08);
+}
+
+.modal-card{
+  position:relative;
+  max-width:700px;
+  margin:80px auto 0 auto;
+  background:#fff;
+  border:1px solid #111;
+  padding:16px;
+}
+
+.modal-head{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:10px;
+  margin-bottom:10px;
+}
+
+.modal-title{
+  font-size:18px;
+}
+
+.search-input{
+  width:100%;
+  border:1px solid #111;
+  padding:10px 12px;
+  font-size:16px;
+  outline:none;
+}
+
+.results{
+  margin-top:12px;
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  max-height:340px;
+  overflow:auto;
+  padding-right:6px;
+}
+
+.result{
+  border-bottom:1px solid #eee;
+  padding:10px 0;
+}
+
+.result-title{
+  font-size:18px;
+  margin:0 0 4px 0;
+}
+
+.result-meta{
+  font-size:13px;
+  color:var(--muted);
+}
