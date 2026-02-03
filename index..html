@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>phat nguyen</title>
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <a class="brand" href="index.html" aria-label="Home">phat nguyen</a>
+
+    <nav class="nav">
+      <a href="blog.html">blog</a>
+      <a href="categories.html">categories</a>
+      <a href="about.html">about</a>
+      <button class="icon-btn" id="openSearch" aria-label="Search">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <path d="M10 4a6 6 0 104.47 10.03l4.25 4.24 1.41-1.41-4.24-4.25A6 6 0 0010 4zm0 2a4 4 0 110 8 4 4 0 010-8z"></path>
+        </svg>
+      </button>
+    </nav>
+  </header>
+
+  <main class="hero">
+    <h1>hello, I'm phat</h1>
+    <a class="btn" href="blog.html">read my blog</a>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-line"></div>
+    <div class="footer-row">
+      <div class="muted">Copyright © <span id="year"></span> Phat Nguyen. All rights reserved.</div>
+      <div class="muted" id="today"></div>
+    </div>
+  </footer>
+
+  <div class="modal" id="searchModal" aria-hidden="true">
+    <div class="modal-backdrop" data-close="1"></div>
+    <div class="modal-card" role="dialog" aria-modal="true" aria-label="Search">
+      <div class="modal-head">
+        <div class="modal-title">Search</div>
+        <button class="icon-btn" id="closeSearch" aria-label="Close search">
+          <svg viewBox="0 0 24 24" aria-hidden="true">
+            <path d="M18.3 5.7 12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7 2.9 18.3 9.2 12 2.9 5.7 4.3 4.3l6.3 6.3 6.3-6.3z"></path>
+          </svg>
+        </button>
+      </div>
+
+      <input id="searchInput" class="search-input" placeholder="Type to search posts" autocomplete="off" />
+      <div id="searchResults" class="results"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
+v
