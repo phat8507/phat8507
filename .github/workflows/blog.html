@@ -1,0 +1,49 @@
+---
+layout: none
+title: Blog
+permalink: /blog/
+---
+
+<!doctype html>
+<html lang="{{ site.lang | default: 'en' }}">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>blog — {{ site.title }}</title>
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
+</head>
+<body>
+  <header class="topbar">
+    <div class="brand"><a class="plain" href="{{ '/' | relative_url }}">{{ site.title }}</a></div>
+    <nav class="nav">
+      <a class="active" href="{{ '/blog/' | relative_url }}">blog</a>
+      <a href="{{ '/categories/' | relative_url }}">categories</a>
+      <a href="{{ '/about/' | relative_url }}">about</a>
+      <a class="icon" href="{{ '/search/' | relative_url }}" aria-label="Search">⌕</a>
+      <button class="icon btn-icon" id="themeToggle" aria-label="Toggle dark mode">◐</button>
+    </nav>
+  </header>
+
+  <main class="page">
+    <h1 class="page-title">blog</h1>
+    <ul class="post-list">
+      {% for post in site.posts %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span class="muted">{{ post.date | date: "%-d/%-m/%Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </main>
+
+  <footer class="footer">
+    <div class="line"></div>
+    <div class="footer-row">
+      <div>Copyright © {{ "now" | date: "%Y" }} Phat Nguyen; All rights reserved.</div>
+      <div>{{ "now" | date: "%-d/%-m/%Y" }}</div>
+    </div>
+  </footer>
+
+  <script src="{{ '/assets/js/main.js' | relative_url }}"></script>
+</body>
+</html>
