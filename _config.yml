@@ -9,4 +9,4 @@ baseurl: ""   # <-- repo project thì đổi thành "/TEN-REPO"
 permalink: /blog/:year/:month/:day/:title/
 markdown: kramdown
 plugins:
-  - jekyll-feed
+  - jekyl
