@@ -1,1 +1,160 @@
+:root{
+  --bg:#ffffff;
+  --fg:#111;
+  --muted:#666;
+  --line:#1a1a1a;
+  --btnborder:#111;
+}
+
+[data-theme="dark"]{
+  --bg:#0b0f14;
+  --fg:#e6edf3;
+  --muted:#9aa4ad;
+  --line:#2a323a;
+  --btnborder:#e6edf3;
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+
+body{
+  margin:0;
+  background:var(--bg);
+  color:var(--fg);
+  font-family: Georgia, "Times New Roman", Times, serif;
+}
+
+a{color:var(--fg); text-decoration:none}
+a:hover{text-decoration:underline}
+
+.topbar{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  padding:28px 44px;
+}
+
+.brand{
+  font-size:34px;
+}
+
+.nav{
+  display:flex;
+  align-items:center;
+  gap:34px;
+  font-size:22px;
+}
+
+.nav .icon{font-size:22px}
+.nav .active{ text-decoration: underline; text-underline-offset: 6px; }
+
+.plain:hover{ text-decoration:none; }
+
+.btn-icon{
+  background:transparent;
+  border:0;
+  cursor:pointer;
+  color:var(--fg);
+  padding:0;
+}
+
+.hero{
+  min-height: calc(100vh - 160px);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  gap:14px;
+  padding:0 20px;
+}
+
+.hero h1{
+  margin:0;
+  font-size:72px;
+  font-weight:400;
+}
+
+.btn{
+  display:inline-block;
+  padding:8px 18px;
+  border:1px solid var(--btnborder);
+  color:var(--fg);
+  background:transparent;
+  font-size:14px;
+}
+
+.page{
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 40px 44px 80px;
+}
+
+.page-title{
+  font-size:44px;
+  font-weight:400;
+  margin: 0 0 22px;
+}
+
+.post-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+  font-size:20px;
+}
+
+.post-list li{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.cat-list{
+  list-style:none;
+  padding:0;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  gap:16px;
+  font-size:20px;
+}
+
+.cat-item{
+  display:flex;
+  justify-content:space-between;
+  gap:16px;
+}
+
+.muted{color:var(--muted); font-size:16px}
+
+.search{
+  width:100%;
+  max-width:520px;
+  font-size:18px;
+  padding:10px 12px;
+  border:1px solid var(--line);
+  background:transparent;
+  color:var(--fg);
+  outline:none;
+}
+
+.footer{ padding: 0 44px 18px; }
+.line{ border-top:1px solid var(--line); margin: 0 0 10px; }
+
+.footer-row{
+  display:flex;
+  justify-content:space-between;
+  color:var(--muted);
+  font-size:14px;
+}
+
+@media (max-width: 720px){
+  .topbar{padding:18px 16px}
+  .brand{font-size:26px}
+  .nav{gap:16px; font-size:18px}
+  .hero h1{font-size:44px; text-align:center}
+  .page{padding:28px 16px 70px}
+}
 
